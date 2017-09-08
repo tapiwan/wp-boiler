@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2017-08-09 00:08+0100\n"
+"PO-Revision-Date: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+msgid "Page not found"
+msgstr "Page non trouvée"
+
+msgid "Return home?"
+msgstr "Retour à la page d'accueil ?"
+
+msgid "Test"
+msgstr "Funs"
+
+msgid "Archives"
+msgstr "Archives"
+
+msgid "Author Archives for "
+msgstr "Archives de l'auteur "
+
+msgid "About "
+msgstr "À propos"
+
+msgid "Published by"
+msgstr "Publié par"
+
+msgid "Leave your thoughts"
+msgstr "Laissez vos commentaires"
+
+msgid "1 Comment"
+msgstr "1 Commentaire"
+
+msgid "% Comments"
+msgstr "% Comentaires"
+
+msgid "Sorry, nothing to display."
+msgstr "Désolé, aucun contenu disponible."
+
+msgid "Categories for "
+msgstr "Catégories pour "
+
+msgid "Post is password protected. Enter the password to view any comments."
+msgstr ""
+"Cet article est protégé par un mot de passe. Merci d'entrer le mot de passe "
+"pour voir les commentaires."
+
+msgid "Comments are closed here."
+msgstr "Les commentaires sont fermés."
+
+msgid "Powered by"
+msgstr "Propulsé par"
+
+msgid "Header Menu"
+msgstr "Menu d'entête"
+
+msgid "Sidebar Menu"
+msgstr "Menu de barre latérale"
+
+msgid "Extra Menu"
+msgstr "Menu supplémentaire"
+
+msgid "Widget Area 1"
+msgstr "Zone de widget 1"
+
+msgid "Description for this widget-area..."
+msgstr "Description pour cette zone à widget..."
+
+msgid "Widget Area 2"
+msgstr "Zone de widget 2"
+
+msgid "View Article"
+msgstr "Voir l'article"
+
+msgid "<cite class=\"fn\">%s</cite> <span class=\"says\">says:</span>"
+msgstr "<cite class=\"fn\">%s</cite> <span class=\"says\">dit:</span>"
+
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+msgid "%1$s at %2$s"
+msgstr "%1$s à %2$s"
+
+msgid "(Edit)"
+msgstr "(Éditer)"
+
+msgid "Add New"
+msgstr "Ajouter nouveau"
+
+msgid "Edit"
+msgstr "Éditer"
+
+msgid "Latest Posts"
+msgstr "Articles récents"
+
+msgid "%s Search Results for "
+msgstr "%s Résultats de recherche pour "
+
+msgid "To search, type and hit enter."
+msgstr "Rechercher"
+
+msgid "Search"
+msgstr "Rechercher"
+
+msgid "Tags: "
+msgstr "Tags : "
+
+msgid "Categorised in: "
+msgstr "Classés dans :"
+
+msgid "This post was written by "
+msgstr "Cet article a été écrit par "
+
+msgid "Tag Archive: "
+msgstr "Archives de tags : "
