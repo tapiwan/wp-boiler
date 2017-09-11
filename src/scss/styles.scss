@@ -7,6 +7,7 @@
 | Vorhandene Variablen können in der Datei bootstrap/components/_variables.scss gefunden werden.
 |
 */
+
 @import "bootstrap/bootstrap";
 
 /*
@@ -17,5 +18,7 @@
 | Stylesheets des Themes gehören in den Unterordner theme
 |
 */
+
 @import "theme/header";
+@import "theme/content";
 @import "theme/footer";

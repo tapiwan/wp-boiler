@@ -18,3 +18,7 @@
 | Skripte des Themes gehören in den Unterordner theme
 |
 */
+
+var theme = theme || {};
+
+//=require theme/theme.js

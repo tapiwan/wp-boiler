@@ -1,7 +1,7 @@
 {
-  "name": "wordpress-boiler",
+  "name": "___THEME_NAME___",
   "version": "1.0.0",
-  "description": "Wordpress Boiler Theme Package Dependencies",
+  "description": "___THEME_NAME___ Package Dependencies",
   "main": "index.js",
   "scripts": {
     "gulp": "gulp"

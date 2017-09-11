@@ -44,7 +44,7 @@ class Theme {
 	 */
 	public function loadLanguages() {
 		//Load Language File
-		load_theme_textdomain('onewayfly', get_template_directory() . '/languages');
+		load_theme_textdomain('___THEME_SLUG___', get_template_directory() . '/languages');
 	}
 
 	/**
@@ -70,7 +70,7 @@ class Theme {
 	 */
 	public function registerNavMenus() {
 		register_nav_menus([
-			 'primary' => __('Primary', 'onewayfly'),
+			 'primary' => __('Primary', '___THEME_SLUG___'),
 		]);
 	}
 
@@ -96,10 +96,10 @@ class Theme {
 		//wp_enqueue_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key=KEY');
 
 		//Add Scripts
-		wp_enqueue_script('onewayfly-js', get_template_directory_uri() . '/scripts/main.min.js');
+		wp_enqueue_script('___THEME_SLUG___-js', get_template_directory_uri() . '/scripts/main.min.js');
 
 		//Print Localization JavaScript to the Frontend
-		//wp_localize_script( 'onewayfly-localization-js', 'NAME', array( 'KEY' => 'VALUE' ) );
+		//wp_localize_script( '___THEME_SLUG___-localization-js', 'NAME', array( 'KEY' => 'VALUE' ) );
 	}
 
 	/**
@@ -107,10 +107,10 @@ class Theme {
 	 */
 	public function loadStyles() {
 		//Add Stylesheets
-		wp_enqueue_style('onewayfly-css', get_template_directory_uri() . '/styles/styles.min.css');
+		wp_enqueue_style('___THEME_SLUG___-css', get_template_directory_uri() . '/styles/styles.min.css');
 
 		//Load Theme Style (enforced by wordpress conventions)
-		wp_enqueue_style('onewayfly-style', get_stylesheet_uri());
+		wp_enqueue_style('___THEME_SLUG___-style', get_stylesheet_uri());
 	}
 
 	/**
