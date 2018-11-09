@@ -31,12 +31,10 @@ class Theme {
 
 		$this->addAction('after_setup_theme', 'enableThemeSupport');
 		$this->addAction('after_setup_theme', 'registerNavMenus');
-		$this->addAction('after_setup_theme', 'addImageSizes');
-		$this->addAction('wp_head', 'loadGoogleFonts');
+
 		$this->addAction('wp_enqueue_scripts', 'loadScripts', 900);
 		$this->addAction('wp_enqueue_scripts', 'loadStyles', 910);
 		$this->addAction('wp_enqueue_scripts', 'loadConditionalScripts', 920);
-		$this->addFilter('wp_title', 'initWpTitle', 10, 2);
 	}
 
 	/**
@@ -53,8 +51,6 @@ class Theme {
 	public function enableThemeSupport() {
 		add_theme_support('title-tag');
 		add_theme_support('post-thumbnails');
-		add_theme_support('automatic-feed-links');
-		add_theme_support('custom-logo');
 
 		add_theme_support('html5', [
 			 'search-form',
@@ -70,22 +66,8 @@ class Theme {
 	 */
 	public function registerNavMenus() {
 		register_nav_menus([
-			 'primary' => __('Primary', '___THEME_SLUG___'),
+			 'primary' => __('Primary Menu', '___THEME_SLUG___'),
 		]);
-	}
-
-	/**
-	 * Adds image size support to the theme
-	 */
-	public function addImageSizes() {
-		add_image_size('big', 1920, 1080);
-	}
-
-	/**
-	 * Load google fonts
-	 */
-	public function loadGoogleFonts() {
-		echo '<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i|Pacifico" rel="stylesheet">';
 	}
 
 	/**
@@ -99,7 +81,7 @@ class Theme {
 		wp_enqueue_script('___THEME_SLUG___-js', get_template_directory_uri() . '/scripts/main.min.js');
 
 		//Print Localization JavaScript to the Frontend
-		//wp_localize_script( '___THEME_SLUG___-localization-js', 'NAME', array( 'KEY' => 'VALUE' ) );
+		//wp_localize_script( '___THEME_SLUG___-js', 'NAME', array( 'KEY' => 'VALUE' ) );
 	}
 
 	/**
@@ -124,38 +106,6 @@ class Theme {
 
 		$wp_scripts->add_data('html5_shiv', 'conditional', 'lt IE 9');
 		$wp_scripts->add_data('respond_js', 'conditional', 'lt IE 9');
-	}
-
-	/**
-	 * Initialize the page title
-	 *
-	 * @param $title
-	 * @param $sep
-	 *
-	 * @return string
-	 */
-	public function initWpTitle($title, $sep) {
-		if (is_feed()) {
-			return $title;
-		}
-
-		global $page, $paged;
-
-		// Add the blog name
-		$title .= get_bloginfo('name', 'display');
-
-		// Add the blog description for the home/front page.
-		$site_description = get_bloginfo('description', 'display');
-		if ($site_description && (is_home() || is_front_page())) {
-			$title .= " $sep $site_description";
-		}
-
-		// Add a page number if necessary:
-		if (($paged >= 2 || $page >= 2) && !is_404()) {
-			$title .= " $sep " . sprintf(__('Page %s', '_s'), max($paged, $page));
-		}
-
-		return $title;
 	}
 
 	/**
