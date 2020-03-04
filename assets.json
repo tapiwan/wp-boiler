@@ -1,0 +1,30 @@
+{
+  "scss": {
+    "bundles": [
+      {
+        "name": "styles/main.css",
+        "file": "src/scss/main.scss"
+      }
+    ]
+  },
+  "js": {
+    "bundles": [
+      {
+        "name": "scripts/main.js",
+        "mangle": true,
+        "includes": [
+          "src/vendor/jquery/jquery-3.3.1.js",
+          "src/vendor/bootstrap/js/bootstrap.bundle.js",
+          "src/js/components/critical.js",
+          "src/js/components/tools.js",
+          "src/js/components/common.js"
+        ]
+      }
+    ]
+  },
+  "translations": {
+    "files": [
+      "languages/de_DE.po"
+    ]
+  }
+}

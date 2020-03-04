@@ -1,6 +1,5 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2017-08-09 00:08+0100\n"
 "PO-Revision-Date: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"

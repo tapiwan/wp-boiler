@@ -1,57 +1,33 @@
-/*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-// Core variables and mixins
-@import "components/variables";
-@import "../theme/variables"; //Override Bootstrap Variables
-@import "components/mixins";
-
-// Reset and dependencies
-@import "components/normalize";
-@import "components/print";
-@import "components/glyphicons";
-
-// Core CSS
-@import "components/scaffolding";
-@import "components/type";
-@import "components/code";
-@import "components/grid";
-@import "components/tables";
-@import "components/forms";
-@import "components/buttons";
-
-// Components
-@import "components/component-animations";
-@import "components/dropdowns";
-@import "components/button-groups";
-@import "components/input-groups";
-@import "components/navs";
-@import "components/navbar";
-@import "components/breadcrumbs";
-@import "components/pagination";
-@import "components/pager";
-@import "components/labels";
-@import "components/badges";
-@import "components/jumbotron";
-@import "components/thumbnails";
-@import "components/alerts";
-@import "components/progress-bars";
-@import "components/media";
-@import "components/list-group";
-@import "components/panels";
-@import "components/responsive-embed";
-@import "components/wells";
-@import "components/close";
-
-// Components w/ JavaScript
-@import "components/modals";
-@import "components/tooltip";
-@import "components/popovers";
-@import "components/carousel";
-
-// Utility classes
-@import "components/utilities";
-@import "components/responsive-utilities";
+@import "base-parts";
+@import "../../vendor/bootstrap/scss/root";
+@import "../../vendor/bootstrap/scss/reboot";
+@import "../../vendor/bootstrap/scss/type";
+@import "../../vendor/bootstrap/scss/images";
+@import "../../vendor/bootstrap/scss/code";
+@import "../../vendor/bootstrap/scss/grid";
+@import "../../vendor/bootstrap/scss/tables";
+@import "../../vendor/bootstrap/scss/forms";
+@import "../../vendor/bootstrap/scss/buttons";
+@import "../../vendor/bootstrap/scss/transitions";
+@import "../../vendor/bootstrap/scss/dropdown";
+@import "../../vendor/bootstrap/scss/button-group";
+@import "../../vendor/bootstrap/scss/input-group";
+@import "../../vendor/bootstrap/scss/custom-forms";
+@import "../../vendor/bootstrap/scss/nav";
+@import "../../vendor/bootstrap/scss/navbar";
+@import "../../vendor/bootstrap/scss/card";
+@import "../../vendor/bootstrap/scss/breadcrumb";
+@import "../../vendor/bootstrap/scss/pagination";
+@import "../../vendor/bootstrap/scss/badge";
+@import "../../vendor/bootstrap/scss/jumbotron";
+@import "../../vendor/bootstrap/scss/alert";
+@import "../../vendor/bootstrap/scss/progress";
+@import "../../vendor/bootstrap/scss/media";
+@import "../../vendor/bootstrap/scss/list-group";
+@import "../../vendor/bootstrap/scss/close";
+@import "../../vendor/bootstrap/scss/modal";
+@import "../../vendor/bootstrap/scss/tooltip";
+@import "../../vendor/bootstrap/scss/popover";
+@import "../../vendor/bootstrap/scss/carousel";
+@import "../../vendor/bootstrap/scss/utilities";
+@import "../../vendor/bootstrap/scss/print";
