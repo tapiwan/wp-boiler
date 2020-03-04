@@ -95,4 +95,10 @@ fabric.properties
 .idea/**/markdown-navigator.xml
 .idea/**/markdown-navigator/
 
+# Boiler
+.idea/wp-boiler.iml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/$CACHE_FILE$
+
 # End of https://www.gitignore.io/api/phpstorm
