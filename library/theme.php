@@ -14,7 +14,7 @@ class Theme {
 	 * @return Theme
 	 */
 	public static function instance() {
-		if (isset(self::$instance)) {
+		if(isset(self::$instance)) {
 			return self::$instance;
 		}
 
@@ -27,14 +27,14 @@ class Theme {
 	 * Theme constructor.
 	 */
 	public function __construct() {
-		$this->addAction('init', 'loadLanguages');
+		add_action('init', [$this, 'loadLanguages']);
 
-		$this->addAction('after_setup_theme', 'enableThemeSupport');
-		$this->addAction('after_setup_theme', 'registerNavMenus');
+		add_action('after_setup_theme', [$this, 'enableThemeSupport']);
+		add_action('after_setup_theme', [$this, 'registerNavMenus']);
 
-		$this->addAction('wp_enqueue_scripts', 'loadScripts', 900);
-		$this->addAction('wp_enqueue_scripts', 'loadStyles', 910);
-		$this->addAction('wp_enqueue_scripts', 'loadConditionalScripts', 920);
+		add_action('wp_enqueue_scripts', [$this, 'loadScripts'], 900);
+		add_action('wp_enqueue_scripts', [$this, 'loadStyles'], 910);
+		add_action('wp_enqueue_scripts', [$this, 'loadConditionalScripts'], 920);
 	}
 
 	/**
@@ -53,11 +53,11 @@ class Theme {
 		add_theme_support('post-thumbnails');
 
 		add_theme_support('html5', [
-			 'search-form',
-			 'comment-form',
-			 'comment-list',
-			 'gallery',
-			 'caption',
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
 		]);
 	}
 
@@ -66,7 +66,7 @@ class Theme {
 	 */
 	public function registerNavMenus() {
 		register_nav_menus([
-			 'primary' => __('Primary Menu', '$$$THEME_SLUG$$$'),
+			'primary' => __('Primary Menu', '$$$THEME_SLUG$$$'),
 		]);
 	}
 
@@ -78,10 +78,15 @@ class Theme {
 		//wp_enqueue_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key=KEY');
 
 		//Add Scripts
-		wp_enqueue_script('$$$THEME_SLUG$$$-js', get_template_directory_uri() . '/scripts/main.min.js');
+		wp_enqueue_script('$$$THEME_SLUG$$$-js', get_template_directory_uri() . '/scripts/main.js');
 
 		//Print Localization JavaScript to the Frontend
-		//wp_localize_script( '$$$THEME_SLUG$$$-js', '$$$THEME_JS_NAMESPACE$$$', array( 'KEY' => 'VALUE' ) );
+		wp_localize_script('$$$THEME_SLUG$$$-js', '$$$THEME_JS_NAMESPACE$$$', [
+			'meta' => [
+				'ajax_url' => admin_url('admin-ajax.php'),
+			],
+			'translations' => [],
+		]);
 	}
 
 	/**
@@ -89,7 +94,7 @@ class Theme {
 	 */
 	public function loadStyles() {
 		//Add Stylesheets
-		wp_enqueue_style('$$$THEME_SLUG$$$-css', get_template_directory_uri() . '/styles/styles.min.css');
+		wp_enqueue_style('$$$THEME_SLUG$$$-css', get_template_directory_uri() . '/styles/main.css');
 
 		//Load Theme Style (enforced by wordpress conventions)
 		wp_enqueue_style('$$$THEME_SLUG$$$-style', get_stylesheet_uri());
@@ -106,20 +111,6 @@ class Theme {
 
 		$wp_scripts->add_data('html5_shiv', 'conditional', 'lt IE 9');
 		$wp_scripts->add_data('respond_js', 'conditional', 'lt IE 9');
-	}
-
-	/**
-	 * Adds a function to a hook
-	 */
-	private function addAction($hook, $function, $priority = 10, $accepted_args = 1) {
-		add_action($hook, [&$this, $function], $priority, $accepted_args);
-	}
-
-	/**
-	 * Adds a function to a filter
-	 */
-	private function addFilter($tag, $function, $priority = 10, $accepted_args = 1) {
-		add_filter($tag, [&$this, $function], $priority, $accepted_args);
 	}
 }
 
