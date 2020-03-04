@@ -16,14 +16,14 @@ A very basic boiler plate for a wordpress theme.
 
 Placeholder | Example
 ----------- | --------
-``$$$THEME_NAME$$$`` | MyTheme
-``$$$THEME_SLUG$$$`` | my_theme
-``$$$THEME_JS_NAMESPACE$$$`` | mytheme (This will be a global available JavaScript namespace for the theme)
-``$$$THEME_URI$$$`` | www.my-theme.de
-``$$$THEME_AUTHOR$$$`` | Max Mustermann
-``$$$THEME_AUTHOR_URI$$$`` | www.max-mustermann.de
-``$$$THEME_DESCRIPTION$$$`` | One awesome theme
-``$$$THEME_VERSION$$$`` | 1.0.0
+``$$$THEME_NAME$$$`` | MyTheme (required)
+``$$$THEME_SLUG$$$`` | my_theme (required)
+``$$$THEME_JS_NAMESPACE$$$`` | mytheme (required, will be a global available JavaScript namespace for the theme)
+``$$$THEME_URI$$$`` | www.my-theme.de (optional, style.css only)
+``$$$THEME_AUTHOR$$$`` | Max Mustermann (optional, style.css only)
+``$$$THEME_AUTHOR_URI$$$`` | www.max-mustermann.de (optional, style.css only)
+``$$$THEME_DESCRIPTION$$$`` | One awesome theme (optional, style.css only)
+``$$$THEME_VERSION$$$`` | 1.0.0 (optional, style.css only)
 
 2. Run ``npm install`` inside the theme folder, followed by ``npm run gulp watch``. This will install the node packages and start the file watcher for automatic compilation.
 
